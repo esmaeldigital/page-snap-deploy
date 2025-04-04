@@ -5,27 +5,27 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Plus, Check, ExternalLink } from 'lucide-react';
 
-// Mock data
+// Dados simulados
 const domains = [
   { 
     id: '1',
-    name: "mycompany.com",
+    name: "minhaempresa.com",
     status: "verified",
-    addedDate: "2025-02-15",
+    addedDate: "15/02/2025",
     pages: 3
   },
   { 
     id: '2',
-    name: "client-domain.com",
+    name: "dominio-cliente.com",
     status: "verified",
-    addedDate: "2025-03-01",
+    addedDate: "01/03/2025",
     pages: 1
   },
   { 
     id: '3',
-    name: "marketing-site.com",
+    name: "site-marketing.com",
     status: "pending",
-    addedDate: "2025-04-01",
+    addedDate: "01/04/2025",
     pages: 0
   }
 ];
@@ -38,39 +38,39 @@ const DomainsManagement = () => {
     e.preventDefault();
     setIsAddingDomain(false);
     setNewDomain('');
-    // Here would go the actual domain addition logic
+    // Aqui iria a lógica de adição do domínio
   };
 
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
         <div>
-          <h1 className="text-2xl font-bold mb-1">Domain Management</h1>
-          <p className="text-muted-foreground">Connect custom domains to host your landing pages</p>
+          <h1 className="text-2xl font-bold mb-1">Gerenciamento de Domínios</h1>
+          <p className="text-muted-foreground">Conecte domínios personalizados para hospedar suas landing pages</p>
         </div>
         <Button onClick={() => setIsAddingDomain(true)}>
           <Plus size={16} className="mr-2" />
-          Add Domain
+          Adicionar Domínio
         </Button>
       </div>
 
       {isAddingDomain && (
         <Card>
           <CardHeader>
-            <CardTitle>Add New Domain</CardTitle>
+            <CardTitle>Adicionar Novo Domínio</CardTitle>
             <CardDescription>
-              Enter the domain you want to connect to your PageSnap account
+              Digite o domínio que deseja conectar à sua conta PageSnap
             </CardDescription>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleAddDomain} className="space-y-4">
               <div>
                 <label htmlFor="domain" className="block text-sm font-medium mb-1">
-                  Domain Name
+                  Nome do Domínio
                 </label>
                 <Input 
                   id="domain"
-                  placeholder="example.com" 
+                  placeholder="exemplo.com" 
                   value={newDomain}
                   onChange={(e) => setNewDomain(e.target.value)}
                   className="max-w-md"
@@ -78,9 +78,9 @@ const DomainsManagement = () => {
               </div>
               
               <div className="flex gap-2">
-                <Button type="submit" disabled={!newDomain}>Add Domain</Button>
+                <Button type="submit" disabled={!newDomain}>Adicionar Domínio</Button>
                 <Button type="button" variant="outline" onClick={() => setIsAddingDomain(false)}>
-                  Cancel
+                  Cancelar
                 </Button>
               </div>
             </form>
@@ -90,9 +90,9 @@ const DomainsManagement = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>Your Domains</CardTitle>
+          <CardTitle>Seus Domínios</CardTitle>
           <CardDescription>
-            Manage all domains connected to your account
+            Gerencie todos os domínios conectados à sua conta
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -100,11 +100,11 @@ const DomainsManagement = () => {
             <table className="w-full">
               <thead>
                 <tr className="bg-muted text-left text-sm">
-                  <th className="px-4 py-3 font-medium">Domain</th>
+                  <th className="px-4 py-3 font-medium">Domínio</th>
                   <th className="px-4 py-3 font-medium">Status</th>
-                  <th className="px-4 py-3 font-medium">Added Date</th>
-                  <th className="px-4 py-3 font-medium">Pages</th>
-                  <th className="px-4 py-3 font-medium">Actions</th>
+                  <th className="px-4 py-3 font-medium">Data de Adição</th>
+                  <th className="px-4 py-3 font-medium">Páginas</th>
+                  <th className="px-4 py-3 font-medium">Ações</th>
                 </tr>
               </thead>
               <tbody className="divide-y">
@@ -115,12 +115,12 @@ const DomainsManagement = () => {
                       {domain.status === "verified" ? (
                         <div className="flex items-center">
                           <div className="w-2 h-2 rounded-full bg-green-500 mr-2"></div>
-                          <span>Verified</span>
+                          <span>Verificado</span>
                         </div>
                       ) : (
                         <div className="flex items-center">
                           <div className="w-2 h-2 rounded-full bg-amber-500 mr-2"></div>
-                          <span>Pending</span>
+                          <span>Pendente</span>
                         </div>
                       )}
                     </td>
@@ -129,10 +129,10 @@ const DomainsManagement = () => {
                     <td className="px-4 py-3">
                       <div className="flex gap-2">
                         <Button variant="ghost" size="sm">
-                          Verify
+                          Verificar
                         </Button>
                         <Button variant="ghost" size="sm">
-                          DNS Settings
+                          Configurações DNS
                         </Button>
                       </div>
                     </td>
@@ -146,26 +146,26 @@ const DomainsManagement = () => {
 
       <Card>
         <CardHeader>
-          <CardTitle>DNS Configuration Guide</CardTitle>
+          <CardTitle>Guia de Configuração DNS</CardTitle>
           <CardDescription>
-            Follow these steps to configure your domain's DNS settings
+            Siga estas etapas para configurar as definições DNS do seu domínio
           </CardDescription>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             <div>
-              <h3 className="font-medium mb-2">Step 1: Add DNS Records</h3>
+              <h3 className="font-medium mb-2">Passo 1: Adicionar Registros DNS</h3>
               <p className="text-sm text-muted-foreground mb-2">
-                Add the following DNS records to your domain's DNS settings:
+                Adicione os seguintes registros DNS às configurações DNS do seu domínio:
               </p>
               
               <div className="bg-muted p-4 rounded-md mb-4 overflow-x-auto">
                 <table className="text-sm">
                   <thead>
                     <tr className="text-left">
-                      <th className="pr-8 pb-2">Type</th>
-                      <th className="pr-8 pb-2">Name</th>
-                      <th className="pr-8 pb-2">Value</th>
+                      <th className="pr-8 pb-2">Tipo</th>
+                      <th className="pr-8 pb-2">Nome</th>
+                      <th className="pr-8 pb-2">Valor</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -183,15 +183,15 @@ const DomainsManagement = () => {
                 </table>
               </div>
               
-              <h3 className="font-medium mb-2">Step 2: Verify Your Domain</h3>
+              <h3 className="font-medium mb-2">Passo 2: Verificar Seu Domínio</h3>
               <p className="text-sm text-muted-foreground mb-2">
-                After adding the DNS records, click the "Verify" button next to your domain. 
-                DNS changes can take up to 48 hours to propagate.
+                Após adicionar os registros DNS, clique no botão "Verificar" ao lado do seu domínio. 
+                Alterações de DNS podem levar até 48 horas para se propagarem.
               </p>
               
-              <h3 className="font-medium mb-2">Step 3: Start Using Your Domain</h3>
+              <h3 className="font-medium mb-2">Passo 3: Começar a Usar Seu Domínio</h3>
               <p className="text-sm text-muted-foreground mb-2">
-                Once verified, your domain is ready to use with any page in your account.
+                Depois de verificado, seu domínio estará pronto para uso com qualquer página em sua conta.
               </p>
               
               <div className="flex items-center mt-4">
@@ -199,7 +199,7 @@ const DomainsManagement = () => {
                   href="#" 
                   className="flex items-center text-sm text-primary hover:underline"
                 >
-                  View detailed guide
+                  Ver guia detalhado
                   <ExternalLink size={14} className="ml-1" />
                 </a>
               </div>

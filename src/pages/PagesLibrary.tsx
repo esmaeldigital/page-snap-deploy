@@ -7,65 +7,65 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Search, Plus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Mock data
+// Dados simulados
 const pages = [
   { 
     id: '1',
-    name: "Product Launch",
+    name: "Lançamento de Produto",
     url: "product-launch",
-    domain: "mycompany.com",
+    domain: "minhaempresa.com",
     views: 842,
-    date: "2025-03-28",
+    date: "28/03/2025",
     thumbnail: "https://placehold.co/400x225",
     status: "active"
   },
   { 
     id: '2',
-    name: "Webinar Registration",
+    name: "Registro de Webinar",
     url: "webinar-reg",
     domain: "pagespan.app",
     views: 326,
-    date: "2025-03-25",
+    date: "25/03/2025",
     thumbnail: "https://placehold.co/400x225/eee/aaa",
     status: "active"
   },
   { 
     id: '3',
-    name: "Ebook Download",
+    name: "Download de E-book",
     url: "ebook-landing",
-    domain: "client-domain.com",
+    domain: "dominio-cliente.com",
     views: 194,
-    date: "2025-03-22",
+    date: "22/03/2025",
     thumbnail: "https://placehold.co/400x225/f0f0ff/aaaacc",
     status: "active"
   },
   { 
     id: '4',
-    name: "Course Landing Page",
+    name: "Página de Curso",
     url: "course-promo",
-    domain: "mycompany.com",
+    domain: "minhaempresa.com",
     views: 0,
-    date: "2025-04-01",
+    date: "01/04/2025",
     thumbnail: "https://placehold.co/400x225/fff0f0/ccaaaa",
     status: "draft"
   },
   { 
     id: '5',
-    name: "Product Demo Request",
+    name: "Solicitação de Demo",
     url: "request-demo",
     domain: "pagespan.app",
     views: 129,
-    date: "2025-03-15",
+    date: "15/03/2025",
     thumbnail: "https://placehold.co/400x225/f0fff0/aaccaa",
     status: "active"
   },
   { 
     id: '6',
-    name: "Affiliate Promotion",
+    name: "Promoção de Afiliados",
     url: "affiliate-offer",
     domain: "pagespan.app",
     views: 78,
-    date: "2025-03-10",
+    date: "10/03/2025",
     thumbnail: "https://placehold.co/400x225/ffffee/ccccaa",
     status: "archived"
   }
@@ -75,16 +75,16 @@ const PagesLibrary = () => {
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row gap-4 justify-between items-center">
-        <h1 className="text-2xl font-bold">My Pages</h1>
+        <h1 className="text-2xl font-bold">Minhas Páginas</h1>
         <div className="flex gap-2 w-full sm:w-auto">
           <div className="relative flex-1 sm:w-64">
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-muted-foreground" />
-            <Input className="pl-9" placeholder="Search pages..." />
+            <Input className="pl-9" placeholder="Buscar páginas..." />
           </div>
           <Button asChild>
             <Link to="/clone" className="flex items-center gap-2">
               <Plus size={16} />
-              New Page
+              Nova Página
             </Link>
           </Button>
         </div>
@@ -92,10 +92,10 @@ const PagesLibrary = () => {
 
       <Tabs defaultValue="all">
         <TabsList>
-          <TabsTrigger value="all">All Pages</TabsTrigger>
-          <TabsTrigger value="active">Active</TabsTrigger>
-          <TabsTrigger value="draft">Drafts</TabsTrigger>
-          <TabsTrigger value="archived">Archived</TabsTrigger>
+          <TabsTrigger value="all">Todas as Páginas</TabsTrigger>
+          <TabsTrigger value="active">Ativas</TabsTrigger>
+          <TabsTrigger value="draft">Rascunhos</TabsTrigger>
+          <TabsTrigger value="archived">Arquivadas</TabsTrigger>
         </TabsList>
         
         {["all", "active", "draft", "archived"].map((tab) => (
@@ -114,14 +114,14 @@ const PagesLibrary = () => {
                       {page.status === "draft" && (
                         <div className="absolute top-2 right-2">
                           <span className="bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-md font-medium">
-                            Draft
+                            Rascunho
                           </span>
                         </div>
                       )}
                       {page.status === "archived" && (
                         <div className="absolute top-2 right-2">
                           <span className="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-md font-medium">
-                            Archived
+                            Arquivada
                           </span>
                         </div>
                       )}
@@ -135,11 +135,11 @@ const PagesLibrary = () => {
                       <div className="flex items-center justify-between">
                         <div className="text-sm">
                           <span className="font-medium">{page.views}</span> 
-                          <span className="text-muted-foreground"> views</span>
+                          <span className="text-muted-foreground"> visualizações</span>
                         </div>
                         <div className="flex gap-2">
-                          <Button size="sm" variant="outline">Edit</Button>
-                          <Button size="sm">View</Button>
+                          <Button size="sm" variant="outline">Editar</Button>
+                          <Button size="sm">Visualizar</Button>
                         </div>
                       </div>
                     </CardContent>

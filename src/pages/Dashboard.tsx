@@ -6,38 +6,38 @@ import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { ArrowRight, Plus } from 'lucide-react';
 
-// Mock data
+// Dados simulados
 const stats = [
-  { title: "Active Pages", value: "12" },
-  { title: "Total Views", value: "4,320" },
-  { title: "Domains", value: "3" },
-  { title: "Conversion Rate", value: "3.2%" }
+  { title: "Páginas Ativas", value: "12" },
+  { title: "Visualizações Totais", value: "4.320" },
+  { title: "Domínios", value: "3" },
+  { title: "Taxa de Conversão", value: "3,2%" }
 ];
 
 const recentPages = [
-  { name: "Product Launch", url: "product-launch", views: 842, date: "2025-03-28", thumbnail: "https://placehold.co/400x225" },
-  { name: "Webinar Registration", url: "webinar-reg", views: 326, date: "2025-03-25", thumbnail: "https://placehold.co/400x225/eee/aaa" },
-  { name: "Ebook Download", url: "ebook-landing", views: 194, date: "2025-03-22", thumbnail: "https://placehold.co/400x225/f0f0ff/aaaacc" }
+  { name: "Lançamento de Produto", url: "product-launch", views: 842, date: "28/03/2025", thumbnail: "https://placehold.co/400x225" },
+  { name: "Registro de Webinar", url: "webinar-reg", views: 326, date: "25/03/2025", thumbnail: "https://placehold.co/400x225/eee/aaa" },
+  { name: "Download de E-book", url: "ebook-landing", views: 194, date: "22/03/2025", thumbnail: "https://placehold.co/400x225/f0f0ff/aaaacc" }
 ];
 
 const Dashboard = () => {
   return (
     <div className="space-y-6">
-      {/* Welcome section */}
+      {/* Seção de boas-vindas */}
       <div className="flex flex-col sm:flex-row justify-between items-start gap-4">
         <div>
-          <h1 className="text-3xl font-bold mb-2">Welcome back!</h1>
-          <p className="text-muted-foreground">Here's what's happening with your landing pages.</p>
+          <h1 className="text-3xl font-bold mb-2">Bem-vindo de volta!</h1>
+          <p className="text-muted-foreground">Aqui está o que está acontecendo com suas landing pages.</p>
         </div>
         <Button asChild>
           <Link to="/clone" className="flex items-center gap-2">
             <Plus size={16} />
-            Clone New Page
+            Clonar Nova Página
           </Link>
         </Button>
       </div>
 
-      {/* Stats cards */}
+      {/* Cards de estatísticas */}
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {stats.map((stat, index) => (
           <Card key={index}>
@@ -51,30 +51,30 @@ const Dashboard = () => {
         ))}
       </div>
 
-      {/* Usage Progress */}
+      {/* Progresso de uso */}
       <Card>
         <CardHeader>
-          <CardTitle className="text-lg">Plan Usage</CardTitle>
-          <CardDescription>Free plan - 5/10 pages used</CardDescription>
+          <CardTitle className="text-lg">Uso do Plano</CardTitle>
+          <CardDescription>Plano gratuito - 5/10 páginas utilizadas</CardDescription>
         </CardHeader>
         <CardContent>
           <Progress value={50} className="h-2" />
         </CardContent>
         <CardFooter className="flex justify-between">
-          <p className="text-xs text-muted-foreground">5 landing pages remaining in your plan</p>
+          <p className="text-xs text-muted-foreground">Restam 5 landing pages no seu plano</p>
           <Button variant="outline" size="sm">
-            Upgrade
+            Atualizar
           </Button>
         </CardFooter>
       </Card>
 
-      {/* Recent Pages */}
+      {/* Páginas Recentes */}
       <div>
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-xl font-semibold">Recent Pages</h2>
+          <h2 className="text-xl font-semibold">Páginas Recentes</h2>
           <Button variant="ghost" size="sm" asChild>
             <Link to="/pages" className="flex items-center gap-1">
-              View all <ArrowRight size={16} />
+              Ver todas <ArrowRight size={16} />
             </Link>
           </Button>
         </div>
@@ -86,10 +86,10 @@ const Dashboard = () => {
                 <img src={page.thumbnail} alt={page.name} className="w-full aspect-[16/9] object-cover" />
                 <div className="p-4">
                   <h3 className="font-semibold text-lg mb-1">{page.name}</h3>
-                  <p className="text-xs text-muted-foreground mb-3">Created: {page.date}</p>
+                  <p className="text-xs text-muted-foreground mb-3">Criada em: {page.date}</p>
                   <div className="flex justify-between items-center">
-                    <span className="text-sm font-medium">{page.views} views</span>
-                    <Button variant="outline" size="sm">Edit</Button>
+                    <span className="text-sm font-medium">{page.views} visualizações</span>
+                    <Button variant="outline" size="sm">Editar</Button>
                   </div>
                 </div>
               </CardContent>
