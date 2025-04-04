@@ -170,7 +170,7 @@ const ClonePage = () => {
               Go Back
             </Button>
             <Button>
-              Publish Page
+              Clonar
             </Button>
           </CardFooter>
         </Card>
