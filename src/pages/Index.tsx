@@ -4,8 +4,8 @@ import { Navigate } from 'react-router-dom';
 import LandingPage from './LandingPage';
 
 const Index = () => {
-  // When the app grows, we can check for authentication here
-  // and redirect logged in users to dashboard
+  // Quando o app crescer, podemos verificar a autenticação aqui
+  // e redirecionar usuários logados para o painel
   const isLoggedIn = false;
 
   if (isLoggedIn) {

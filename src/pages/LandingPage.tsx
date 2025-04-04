@@ -7,7 +7,7 @@ import { ArrowRight } from 'lucide-react';
 const LandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
+      {/* Cabeçalho */}
       <header className="bg-background border-b sticky top-0 z-10">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
@@ -18,43 +18,43 @@ const LandingPage = () => {
           </div>
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6">
-              <a href="#features" className="text-sm hover:text-primary">Features</a>
-              <a href="#how-it-works" className="text-sm hover:text-primary">How it works</a>
-              <a href="#pricing" className="text-sm hover:text-primary">Pricing</a>
+              <a href="#features" className="text-sm hover:text-primary">Recursos</a>
+              <a href="#how-it-works" className="text-sm hover:text-primary">Como funciona</a>
+              <a href="#pricing" className="text-sm hover:text-primary">Preços</a>
             </nav>
             <div className="flex items-center gap-2">
               <Button variant="outline" asChild>
-                <Link to="/login">Login</Link>
+                <Link to="/login">Entrar</Link>
               </Button>
               <Button asChild>
-                <Link to="/register">Sign up free</Link>
+                <Link to="/register">Cadastre-se grátis</Link>
               </Button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Seção Hero */}
       <section className="bg-gradient-to-b from-blue-50 to-white py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 gradient-text">
-              Clone any Landing Page in Seconds
+              Clone qualquer Landing Page em Segundos
             </h1>
             <p className="text-xl mb-8 text-gray-600">
-              Modify, customize and deploy landing pages to your own domain without coding skills.
-              Perfect for marketers, agencies, and business owners.
+              Modifique, personalize e publique landing pages em seu próprio domínio sem conhecimento de programação.
+              Perfeito para profissionais de marketing, agências e proprietários de negócios.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
                 <Link to="/register" className="flex items-center gap-2">
-                  Get Started Free
+                  Comece Gratuitamente
                   <ArrowRight size={18} />
                 </Link>
               </Button>
               <Button size="lg" variant="outline" asChild>
                 <a href="#how-it-works">
-                  See how it works
+                  Veja como funciona
                 </a>
               </Button>
             </div>
@@ -62,38 +62,38 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* Features */}
+      {/* Recursos */}
       <section id="features" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="gradient-text">Features</span> that make page cloning easy
+            <span className="gradient-text">Recursos</span> que facilitam a clonagem de páginas
           </h2>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "One-Click Cloning",
-                description: "Simply enter the URL and let our system clone the entire page for you in seconds."
+                title: "Clonagem com Um Clique",
+                description: "Simplesmente insira a URL e deixe nosso sistema clonar a página inteira para você em segundos."
               },
               {
-                title: "Easy Customization",
-                description: "Modify texts, links, and buttons without needing any coding experience."
+                title: "Personalização Simples",
+                description: "Modifique textos, links e botões sem precisar de experiência em programação."
               },
               {
-                title: "Custom Domain",
-                description: "Deploy your cloned pages to your own custom domains with ease."
+                title: "Domínio Personalizado",
+                description: "Publique suas páginas clonadas em seus próprios domínios com facilidade."
               },
               {
-                title: "Analytics",
-                description: "Track visitor stats, conversions, and engagement for all your landing pages."
+                title: "Análises",
+                description: "Acompanhe estatísticas de visitantes, conversões e engajamento para todas as suas landing pages."
               },
               {
-                title: "Multiple Templates",
-                description: "Choose from our growing library of high-converting templates."
+                title: "Múltiplos Modelos",
+                description: "Escolha entre nossa biblioteca crescente de modelos de alta conversão."
               },
               {
-                title: "Mobile Responsive",
-                description: "All cloned pages automatically adapt to desktop, tablet, and mobile devices."
+                title: "Responsivo para Dispositivos Móveis",
+                description: "Todas as páginas clonadas se adaptam automaticamente a computadores, tablets e dispositivos móveis."
               }
             ].map((feature, index) => (
               <div key={index} className="bg-gray-50 rounded-lg p-6 border border-gray-100 hover:border-brand-primary transition-colors duration-200">
@@ -105,11 +105,11 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* How it works */}
+      {/* Como funciona */}
       <section id="how-it-works" className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-            <span className="gradient-text">How it works</span> in 3 simple steps
+            <span className="gradient-text">Como funciona</span> em 3 passos simples
           </h2>
 
           <div className="max-w-4xl mx-auto">
@@ -117,18 +117,18 @@ const LandingPage = () => {
               {[
                 {
                   step: "01",
-                  title: "Paste URL",
-                  description: "Enter the URL of any landing page you want to clone"
+                  title: "Cole a URL",
+                  description: "Insira a URL de qualquer landing page que você deseja clonar"
                 },
                 {
                   step: "02",
-                  title: "Edit Content",
-                  description: "Customize texts, buttons, links, and colors to match your needs"
+                  title: "Edite o Conteúdo",
+                  description: "Personalize textos, botões, links e cores para atender às suas necessidades"
                 },
                 {
                   step: "03",
-                  title: "Publish",
-                  description: "Deploy to your own domain and start driving traffic"
+                  title: "Publique",
+                  description: "Implante em seu próprio domínio e comece a direcionar tráfego"
                 }
               ].map((step, index) => (
                 <div key={index} className="text-center">
@@ -144,25 +144,25 @@ const LandingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Seção CTA */}
       <section className="py-16 md:py-24 bg-gradient-to-r from-brand-primary to-brand-accent text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to start cloning landing pages?
+            Pronto para começar a clonar landing pages?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Join thousands of marketers and entrepreneurs who use PageSnap to create and deploy high-converting landing pages in minutes.
+            Junte-se a milhares de profissionais de marketing e empreendedores que usam o PageSnap para criar e publicar landing pages de alta conversão em minutos.
           </p>
           <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-gray-100" asChild>
             <Link to="/register" className="flex items-center gap-2">
-              Start For Free
+              Comece Gratuitamente
               <ArrowRight size={18} />
             </Link>
           </Button>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* Rodapé */}
       <footer className="bg-gray-900 text-gray-300 py-12">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
@@ -174,42 +174,42 @@ const LandingPage = () => {
                 <span className="font-semibold text-lg text-white">PageSnap</span>
               </div>
               <p className="text-sm">
-                Clone, customize and deploy landing pages in seconds without coding. Perfect for marketers and business owners.
+                Clone, personalize e publique landing pages em segundos sem programação. Perfeito para profissionais de marketing e proprietários de negócios.
               </p>
             </div>
             
             <div>
-              <h3 className="text-white font-semibold mb-4">Product</h3>
+              <h3 className="text-white font-semibold mb-4">Produto</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#features" className="hover:text-white">Features</a></li>
-                <li><a href="#" className="hover:text-white">Pricing</a></li>
-                <li><a href="#" className="hover:text-white">Templates</a></li>
-                <li><a href="#" className="hover:text-white">Integrations</a></li>
+                <li><a href="#features" className="hover:text-white">Recursos</a></li>
+                <li><a href="#" className="hover:text-white">Preços</a></li>
+                <li><a href="#" className="hover:text-white">Modelos</a></li>
+                <li><a href="#" className="hover:text-white">Integrações</a></li>
               </ul>
             </div>
             
             <div>
-              <h3 className="text-white font-semibold mb-4">Resources</h3>
+              <h3 className="text-white font-semibold mb-4">Recursos</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="#" className="hover:text-white">Blog</a></li>
-                <li><a href="#" className="hover:text-white">Documentation</a></li>
-                <li><a href="#" className="hover:text-white">Help Center</a></li>
-                <li><a href="#" className="hover:text-white">Tutorials</a></li>
+                <li><a href="#" className="hover:text-white">Documentação</a></li>
+                <li><a href="#" className="hover:text-white">Central de Ajuda</a></li>
+                <li><a href="#" className="hover:text-white">Tutoriais</a></li>
               </ul>
             </div>
             
             <div>
               <h3 className="text-white font-semibold mb-4">Legal</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="#" className="hover:text-white">Terms of Service</a></li>
-                <li><a href="#" className="hover:text-white">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white">Copyright Policy</a></li>
+                <li><a href="#" className="hover:text-white">Termos de Serviço</a></li>
+                <li><a href="#" className="hover:text-white">Política de Privacidade</a></li>
+                <li><a href="#" className="hover:text-white">Política de Direitos Autorais</a></li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-gray-800 mt-12 pt-6 text-sm text-center">
-            <p>© {new Date().getFullYear()} PageSnap. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} PageSnap. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>

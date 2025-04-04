@@ -28,27 +28,27 @@ import { Button } from '@/components/ui/button';
 
 const menuItems = [
   {
-    title: "Dashboard",
+    title: "Painel",
     path: "/dashboard",
     icon: Home
   },
   {
-    title: "Clone Page",
+    title: "Clonar Página",
     path: "/clone",
     icon: Plus
   },
   {
-    title: "My Pages",
+    title: "Minhas Páginas",
     path: "/pages",
     icon: Database
   },
   {
-    title: "Domains",
+    title: "Domínios",
     path: "/domains",
     icon: LinkIcon
   },
   {
-    title: "Help",
+    title: "Ajuda",
     path: "/help",
     icon: Search
   },
@@ -76,7 +76,7 @@ export function AppSidebar() {
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton 
                     asChild
-                    active={location.pathname === item.path}
+                    isActive={location.pathname === item.path}
                   >
                     <Link to={item.path} className="flex items-center gap-2">
                       <item.icon size={18} />
@@ -92,7 +92,7 @@ export function AppSidebar() {
       <SidebarFooter className="border-t p-4">
         <Button variant="outline" className="w-full justify-start gap-2">
           <User size={16} />
-          <span>Profile</span>
+          <span>Perfil</span>
         </Button>
       </SidebarFooter>
     </Sidebar>
